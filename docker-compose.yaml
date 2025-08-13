@@ -67,3 +67,16 @@ services:
       - cart
       - user
       - rabbitmq
+
+  frontend:
+    image: kntheun/frontend:v1
+    container_name: frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - user
+      - cart
+      - catalogue
+      - mysql
+      - shipping
+      - payment
