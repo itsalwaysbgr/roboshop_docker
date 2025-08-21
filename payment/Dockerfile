@@ -6,7 +6,7 @@ COPY payment.ini .
 RUN pip3 install -r requirements.txt
 
 
-FROM 3.9.23-alpine3.32
+FROM python:3.9.23-alpine3.32
 EXPOSE 8080
 RUN addgroup -S roboshop && adduser -S roboshop -G roboshop
 WORKDIR /opt/server
