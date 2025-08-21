@@ -6,4 +6,6 @@ ENV MONGO="true" \
 COPY package.json .
 COPY *.js .
 RUN npm install
+RUN apt-get update && apt-get install -y curl
+
 CMD ["node", "server.js"]
